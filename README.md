@@ -1,5 +1,5 @@
 
-# ![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAJ1BMVEVHcEzaHkPZHkLaHkLaH0LZHkLZHkLaH0LaHkLaHkLZHkLaH0PZHkIzA1c4AAAAC3RSTlMA7GAneBA63aC4xneL4goAAACpSURBVCiRjdJZEoQgDATQJMhmuP95J+woxJr2y3pSdASAv2M+zDNfmiGzqsUUbXZUMaxhOpj/6oIySovd9kNwfduwdwEzO5mXMdiJ8XrN8MA60ZV2JLjlVRLKa/4CIK2YK9eKSSLYIpjq2NTRjpUOPLa21NAAD7zHnNRxrlxCBR1Q4vysPyhrRtnGZdvOrLRCaR/xcJGozXBOUY5WV/3IRRkVk65BvbZ7fpEJC3+3VsroAAAAAElFTkSuQmCC)    jQuery XSS Scanner Pro  
+# ![](https://avatars.githubusercontent.com/u/208623228?v=4&size=35) jQuery XSS Scanner Pro  
 
 Protect your websites from Cross-Site Scripting (XSS) vulnerabilities with ease!
 
