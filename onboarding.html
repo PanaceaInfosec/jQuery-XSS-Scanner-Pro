@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to jQuery XSS Scanner Pro</title>
+  <style>
+    :root {
+      --primary-color: #1976d2;
+      --primary-dark: #1565c0;
+      --danger-color: #d32f2f;
+      --success-color: #2e7d32;
+      --warning-color: #ff9800;
+      --text-color: #333333;
+      --text-light: #757575;
+      --border-color: #e0e0e0;
+      --bg-light: #f5f5f5;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      color: var(--text-color);
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .logo-container {
+      margin-bottom: 16px;
+    }
+    
+    .logo {
+      height: 60px;
+      margin-bottom: 16px;
+    }
+    
+    h1 {
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--primary-color);
+    }
+    
+    h2 {
+      font-size: 22px;
+      font-weight: 500;
+      margin: 24px 0 16px;
+      color: var(--primary-color);
+    }
+    
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 20px 0 12px;
+    }
+    
+    p {
+      margin-bottom: 16px;
+    }
+    
+    .subtitle {
+      font-size: 16px;
+      color: var(--text-light);
+    }
+    
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin: 32px 0;
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 24px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .feature-icon {
+      font-size: 32px;
+      color: var(--primary-color);
+      margin-bottom: 16px;
+    }
+    
+    .feature-title {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    
+    .feature-description {
+      font-size: 14px;
+      color: var(--text-light);
+    }
+    
+    .alert {
+      padding: 16px;
+      border-radius: 8px;
+      margin: 24px 0;
+    }
+    
+    .alert-warning {
+      background-color: #fff8e1;
+      border-left: 4px solid var(--warning-color);
+    }
+    
+    .alert-info {
+      background-color: #e3f2fd;
+      border-left: 4px solid var(--primary-color);
+    }
+    
+    .step {
+      display: flex;
+      margin-bottom: 24px;
+      align-items: flex-start;
+    }
+    
+    .step-number {
+      background: var(--primary-color);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 16px;
+      flex-shrink: 0;
+    }
+    
+    .step-content {
+      flex: 1;
+    }
+    
+    .step-title {
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    
+    code {
+      font-family: 'Consolas', 'Monaco', monospace;
+      background-color: var(--bg-light);
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    
+    .button {
+      display: inline-block;
+      background: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-weight: 500;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+    
+    .button:hover {
+      background: var(--primary-dark);
+    }
+    
+    .resources {
+      background: var(--bg-light);
+      padding: 24px;
+      border-radius: 8px;
+      margin: 32px 0;
+    }
+    
+    .resource-link {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    
+    .resource-link:hover {
+      text-decoration: underline;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-light);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="icons/panacea-logo.png" alt="Panacea InfoSec" class="logo">
+    </div>
+    <h1>Welcome to jQuery XSS Scanner Pro</h1>
+    <p class="subtitle">Protect your websites from Cross-Site Scripting vulnerabilities</p>
+  </header>
+  
+  <main>
+    <section>
+      <h2>About This Extension</h2>
+      <p>
+        The jQuery XSS Vulnerability Scanner is a security tool designed to help developers and security professionals
+        identify potential Cross-Site Scripting (XSS) vulnerabilities in websites that use jQuery.
+      </p>
+      <p>
+        In April 2020, the jQuery team released version 3.5.0 which fixed several critical security vulnerabilities
+        (CVE-2020-11022, CVE-2020-11023) that had existed in previous versions. Websites using older versions of
+        jQuery may be vulnerable to XSS attacks through these known vulnerabilities.
+      </p>
+      
+      <div class="alert alert-warning">
+        <strong>This tool is for educational and testing purposes only.</strong> Always obtain proper authorization
+        before testing for security vulnerabilities on any website you don't own.
+      </div>
+    </section>
+    
+    <section>
+      <h2>Key Features</h2>
+      
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔍</div>
+          <div class="feature-title">jQuery Detection</div>
+          <div class="feature-description">
+            Automatically detects all jQuery versions loaded on a webpage, including those loaded via CDNs or local files.
+          </div>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">⚠️</div>
+          <div class="feature-title">Vulnerability Analysis</div>
+          <div class="feature-description">
+            Identifies known vulnerable jQuery versions and tests for actual XSS vulnerabilities in the page context.
+          </div>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <div class="feature-title">Security Protection Detection</div>
+          <div class="feature-description">
+            Detects Content Security Policy (CSP) and other security protections that may mitigate XSS risks.
+          </div>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <div class="feature-title">Detailed Reports</div>
+          <div class="feature-description">
+            Provides comprehensive reports with vulnerability details and security recommendations.
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <h2>How to Use the Scanner</h2>
+      
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <div class="step-title">Click the extension icon</div>
+          <p>Click the jQuery XSS Scanner icon in your browser's extension toolbar while visiting a website.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <div class="step-title">Run the scan</div>
+          <p>Click the "Scan This Page" button in the popup to initiate the scan.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <div class="step-title">View the results</div>
+          <p>Review the detailed scan results in the panel that appears on the webpage.</p>
+        </div>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <div class="step-title">Follow recommendations</div>
+          <p>If vulnerabilities are found, follow the security recommendations provided in the report.</p>
+        </div>
+      </div>
+      
+      <div class="alert alert-info">
+        <strong>Pro Tip:</strong> You can also use the persistent corner icon (bottom right of the page) to quickly
+        launch a scan without opening the extension popup.
+      </div>
+    </section>
+    
+    <section>
+      <h2>Understanding XSS Vulnerabilities</h2>
+      
+      <h3>What is XSS?</h3>
+      <p>
+        Cross-Site Scripting (XSS) is a type of security vulnerability that allows attackers to inject malicious
+        client-side scripts into web pages viewed by other users. These attacks occur when an application takes untrusted
+        data and sends it to a web browser without proper validation or encoding.
+      </p>
+      
+      <h3>jQuery XSS Vulnerabilities</h3>
+      <p>
+        jQuery versions prior to 3.5.0 contain vulnerabilities in the way they parse and manipulate HTML. These
+        vulnerabilities can allow attackers to execute malicious JavaScript even when seemingly safe HTML is processed.
+      </p>
+      
+      <h3>Common jQuery XSS Attack Vectors</h3>
+      <ul style="margin-left: 20px; margin-bottom: 16px;">
+        <li>Unsafe use of the <code>$.html()</code> method with untrusted content</li>
+        <li>Vulnerabilities in jQuery's HTML parsing (CVE-2020-11022/11023)</li>
+        <li>Improper handling of nested elements that can lead to script execution</li>
+        <li>Unsafe use of jQuery's selector/constructor with untrusted input</li>
+      </ul>
+    </section>
+    
+    <section class="resources">
+      <h2>Additional Resources</h2>
+      
+      <a href="https://blog.jquery.com/2020/04/10/jquery-3-5-0-released/" class="resource-link" target="_blank">
+        jQuery 3.5.0 Security Release Notes
+      </a>
+      
+      <a href="https://owasp.org/www-community/attacks/xss/" class="resource-link" target="_blank">
+        OWASP XSS Prevention Cheatsheet
+      </a>
+      
+      <a href="https://content-security-policy.com/" class="resource-link" target="_blank">
+        Content Security Policy Guide
+      </a>
+      
+      <a href="https://github.com/cure53/DOMPurify" class="resource-link" target="_blank">
+        DOMPurify - HTML Sanitizer for XSS Prevention
+      </a>
+    </section>
+    
+    <div style="text-align: center; margin: 40px 0;">
+      <a href="#" id="closeButton" class="button">Get Started</a>
+    </div>
+  </main>
+  
+  <footer>
+    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
+      <img src="icons/panacea-logo.png" alt="Panacea InfoSec" style="height: 30px; margin-right: 10px;">
+      <span>Powered by Panacea InfoSec</span>
+    </div>
+    <div>jQuery XSS Vulnerability Scanner Pro &copy; 2025</div>
+  </footer>
+  
+  <script src="onboarding.js"></script>
+</body>
+</html>
