@@ -31,6 +31,17 @@ This tool is **for educational and authorized testing purposes only**. Always en
 
 ---
 
+### 🧪 How to Install:
+1. Clone or download this repository as a ZIP file  
+2. Extract the contents to a folder on your system  
+3. Open `chrome://extensions/` in your Chrome browser  
+4. Enable **Developer Mode** (toggle at the top right)  
+5. Click **“Load unpacked”** and select the extracted folder
+
+> ⚠️ For manual testing only. Always obtain permission before scanning third-party websites.
+
+---
+
 ## 🛠️ How to Use
 
 1. 🖱️ Click the extension icon in your browser toolbar.  
@@ -51,9 +62,6 @@ This tool is **for educational and authorized testing purposes only**. Always en
 - CVE-2020-11022 / CVE-2020-11023  
 - Improper HTML parsing and nested elements  
 - Unsafe selector/constructor usage with dynamic input
-
----
-
 
 ---
 
