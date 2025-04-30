@@ -67,6 +67,6 @@ This tool is **for educational and authorized testing purposes only**. Always en
 
 ## 🚀 Get Started
 
-> 🔧 Install the `.crx` file from the [Releases](https://github.com/PanaceaInfosec/jQuery-XSS-Scanner-Pro/releases) section and follow the usage guide above.
+> 🔧 Download the `.zip` file from the [Releases](https://github.com/PanaceaInfosec/jQuery-XSS-Scanner-Pro/releases) section and follow the usage guide above.
 
 ---
