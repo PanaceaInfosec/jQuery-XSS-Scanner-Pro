@@ -33,7 +33,8 @@ This tool is **for educational and authorized testing purposes only**. Always en
   Displays comprehensive reports with findings and recommendations.
 
 ---
-<img src="https://i.ibb.co/jZjnCGmJ/image.png" width=280 align=right>
+
+<img src="https://i.ibb.co/6RYT379Z/image.png" width=300 align=right>
 
 ### 🧪 How to Install:
 1. Clone or download this repository as a ZIP file  
