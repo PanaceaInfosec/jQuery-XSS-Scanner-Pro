@@ -1,4 +1,5 @@
 
+
 # ![](https://avatars.githubusercontent.com/u/208623228?v=4&size=35) jQuery XSS Scanner Pro  
 
 Protect your websites from Cross-Site Scripting (XSS) vulnerabilities with ease!
@@ -15,6 +16,8 @@ This tool is **for educational and authorized testing purposes only**. Always en
 
 ---
 
+
+
 ## ✨ Key Features
 
 - 🔍 **jQuery Detection**  
@@ -30,6 +33,7 @@ This tool is **for educational and authorized testing purposes only**. Always en
   Displays comprehensive reports with findings and recommendations.
 
 ---
+<img src="https://i.ibb.co/jZjnCGmJ/image.png" width=280 align=right>
 
 ### 🧪 How to Install:
 1. Clone or download this repository as a ZIP file  
